@@ -8,7 +8,7 @@ def show_entries():
 def login():
     if request.method == 'POST':
         if request.form['username'] != app.config['USERNAME']:
-            print('ユーザ名が異なります')
+            print('ユーザ名が異なります!')
         elif request.form['password'] != app.config['PASSWORD']:
             print('パスワードが異なります')
         else:
