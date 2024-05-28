@@ -1,0 +1,7 @@
+{% extends "layout.html"%}
+{% block body%}
+<!DOCTYPE html>
+<p>給与：{{ salary[0] }}円の場合、支給額：{{ salary[2] }}円、税額：{{ salary[1] }}円です。</p>
+<a href="{{url_for('input')}}" class="btn">戻る</a>
+</html>
+{% endblock %}
