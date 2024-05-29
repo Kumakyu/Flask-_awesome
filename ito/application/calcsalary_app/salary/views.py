@@ -3,12 +3,12 @@ from salary import app
 from flask import request, make_response, jsonify
 from flask_cors import CORS
 import sys
-from decimal import Decimal, ROUND_HALF_UP
 
 
 @app.route('/')
 def input():
     return render_template("input.html")
+
 
 @app.route('/',methods=['GET','POST'])
 def calc():
@@ -18,14 +18,22 @@ def calc():
     
     elif int(request.form['salary']) < 0:
         flash("給与にはマイナスの値は入力できません")
-        return None
+        salary = request.form['salary']
+        salary = int(salary)
+        session["input"] = salary
+        #return redirect(url_for("input"))
+        return render_template("input.html")
 
     elif len(str(request.form['salary'])) > 10:
         flash("給与には最大9,999,999,999まで入力可能です。")
-        return None
+        salary = request.form['salary']
+        salary = int(salary)
+        session["input"] = salary
+        return render_template("input.html")
     
     salary = request.form['salary']
     salary = int(salary)
+    
     #税額計算のため、給与1,000,000での判定
     if (salary > 1000000):
         tax = (salary - 1000000) * 0.2 + 100000
