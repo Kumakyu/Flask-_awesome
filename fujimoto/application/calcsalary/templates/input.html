@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block body %}
+<p>給与</p>
+<form action="/login" method="post">
+    <div class="form-group">
+        <label for="InputPassword">パスワード</label>
+        <input type="number" class="form-control" id="InputSalary" name=salary>
+    </div>
+
+    <button type="submit" class="btn btn-primary">計算する</button>
+</form>
+{% endblock %}
