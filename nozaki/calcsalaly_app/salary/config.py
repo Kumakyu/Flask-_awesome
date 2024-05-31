@@ -1,0 +1,3 @@
+DEBUGE = True
+SERCLET_KEY = "PASSWORD"
+
