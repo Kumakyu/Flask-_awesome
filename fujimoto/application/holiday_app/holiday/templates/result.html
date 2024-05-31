@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block body %}
+<h3>処理結果</h3>
+<br>
+<!--SQLから「日付＋（＋祝日の名前＋）が登録されました」-->
+<div>
+    <button type="button" class="btn btn-primary" name="button" href="{{url_for('input')}}">戻る</button>
+</div>
+{% endblock %}

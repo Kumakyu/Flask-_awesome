@@ -1,3 +1,4 @@
+# 入力画面の呼び出し
 from flask import request, redirect, url_for, render_template, flash, session
 from flask_blog import app
 from functools import wraps
