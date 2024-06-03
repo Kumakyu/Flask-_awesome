@@ -1,4 +1,4 @@
-from flask_blog import db
+from holiday import db
 from datetime import datetime, timezone
 
 class Holiday(db.Model):

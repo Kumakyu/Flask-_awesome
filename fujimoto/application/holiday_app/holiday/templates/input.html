@@ -2,13 +2,13 @@
 {% block body %}
 <form action="{{url_for('input')}}" method="post">
     <div class="form-group">
-        <label for="InputDate">祝日 日付</label>
-        <input type="date" class="form-control" id="InputDate" name="holiday">
+        <label for="holi_date">祝日 日付</label>
+        <input type="date" id="holi_date name="holi_date" placeholder="YYYY/mm/dd">
     </div>
 
     <div class="form-group">
-        <label for="InputText">祝日 テキスト</label>
-        <input type="text" class="form-control" id="InputText" name="holiday_text">
+        <label for="holi_text">祝日 テキスト</label>
+        <input type="text" id="holi_text" name="holi_text">
     </div>
     <div class="btn-group">
         <form action="{{url_for('maintenance_date', holi_date=holiday.holi_date, holi_text=holiday.holi_text)}}" method='GET'>
