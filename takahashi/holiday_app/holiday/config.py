@@ -1,5 +1,5 @@
-#SQLALCHEMY_DATABASE_URI = 'sqlite:///flask_blog.db'
-#SQLALCHEMY_TRACK_MODIFICATIONS = True
+DEBUG=True
+SECRET_KEY='secret key'
 
 import os
 
@@ -11,7 +11,4 @@ SQLALCHEMY_DATABASE_URI = "mysql+pymysql://{user}:{password}@{host}/{database}?c
 })
 SQLALCHEMY_TRACK_MODIFICATIONS = False
 
-DEBUG=True
-SECRET_KEY='secret key'
-USERNAME='takahashi'
-PASSWORD='0000'
+
